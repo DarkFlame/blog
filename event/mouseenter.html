@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="A" style="z-index:10;background-color: red;">
+       <div id="B" style="z-index:20;width: 300px;height: 100px;background-color: green;">
+           <div style="z-index:30;width: 100px;height: 100px;background-color: pink;" id="C">
+                backgroud
+           </div>
+       </div>
+   </div>
+<script>
+    let A = document.querySelector('#A')
+    let B = document.querySelector('#B')
+    let C = document.querySelector('#C')
+//
+//    A.addEventListener('mouseenter',()=>{
+//        console.log('A mouseenter')
+//    })
+//
+//    B.addEventListener('mouseenter',()=>{
+//        console.log('B mouseenter')
+//    })
+//
+//    C.addEventListener('mouseenter',()=>{
+//        console.log('C mouseenter')
+//    })
+
+//    A.addEventListener('mouseenter',()=>{
+//        console.log('A mouseenter')
+//    })
+//
+//    B.addEventListener('mouseenter',()=>{
+//        console.log('B mouseenter')
+//    })
+//
+//    C.addEventListener('mouseenter',()=>{
+//        console.log('C mouseenter')
+//    })
+
+    A.addEventListener('mouseover',()=>{
+        console.log('A mouseover')
+    })
+
+    B.addEventListener('mouseover',()=>{
+        console.log('B mouseover')
+    })
+
+    C.addEventListener('mouseover',()=>{
+        console.log('C mouseover')
+    })
+
+</script>
+</body>
+</html>

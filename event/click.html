@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="parent">
+       <button id="main">asdasdasssssssss</button>
+   </div>
+<script>
+    let dom = document.querySelector('#main')
+    let parent = document.querySelector('#parent')
+
+
+
+    dom.addEventListener('click',function(e){
+        console.log('click')
+     //   e.stopPropagation()
+        e.cancelBubble = true;
+    })
+
+
+    dom.addEventListener('mouseenter',function(e){
+        console.log('mouseenter',e)
+     //   e.stopPropagation()
+        e.cancelBubble = true;
+    })
+
+
+
+    parent.addEventListener('click',function(e){
+        console.log('parent click')
+        e.preventDefault()
+    })
+
+
+
+
+</script>
+</body>
+</html>

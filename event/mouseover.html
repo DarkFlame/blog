@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="parent">
+       <!--<button id="button">asdasdasssssssss</button>-->
+        <p id="button" style="line-height: 50px;">asddddddddddddddddddddddddddddddd</p>
+   </div>
+<script>
+//    let dom = document.querySelector('#main')
+//
+//
+//
+//    dom.addEventListener('mousedown',function(){
+//        console.log('mousedown')
+//    })
+//
+//    dom.addEventListener('mouseup',function(){
+//        console.log('mouseup')
+//    })
+//
+//    dom.addEventListener('click',function(e){
+//        console.log('click')
+//        console.log(e.detail)
+//        console.log(e.target)
+//        console.log(e.button)
+//    })
+//
+//    dom.addEventListener('dblclick',function(){
+//        console.log('dblclick')
+//    })
+//
+//    dom.addEventListener('mousemove',function(){
+////        console.log('mousemove..................')
+//    })
+
+
+    var button = document.querySelector('#button');
+    var html = document.querySelector('html');
+
+    function random(number) {
+        return Math.floor(Math.random() * number);
+    }
+
+    button.onclick = function() {
+        console.log(222)
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        button.style.backgroundColor = rndCol;
+    };
+
+    button.onauxclick = function(e) {
+        console.log(e.button)
+        console.log(e.buttons)
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        button.style.color = rndCol;
+    }
+
+
+
+
+</script>
+</body>
+</html>

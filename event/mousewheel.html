@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="A" style="z-index:10;background-color: red;height: 200px;">
+
+   </div>
+<script>
+    let A = document.querySelector('#A')
+
+
+    A.addEventListener('mousewheel',(e)=>{
+        console.log('A mousewheel')
+        console.log(e.deltaX)
+        console.log(e.deltaY)
+        console.log(e.deltaZ)
+        console.log(e.deltaMode)
+    })
+//
+//    A.addEventListener('wheel',(e)=>{
+//        console.log('A wheel')
+//        console.log(e.deltaX)
+//        console.log(e.deltaY)
+//        console.log(e.deltaZ)
+//    })
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="parent">
+       <button id="main">asdasdasssssssss</button>
+       <input id="name" name="name" type="text" style="width: 100px;">
+      <label id="text">这里是一段文本</label>
+   </div>
+<script>
+    let dom = document.querySelector('#main')
+    let parent = document.querySelector('#parent')
+    let name = document.querySelector('#name')
+    let text = document.querySelector('#text')
+
+//
+//    dom.addEventListener('click',function(){
+//        console.log('click3, bubble')
+//    })
+//
+//    dom.addEventListener('click',function(){
+//        console.log('click4, capture')
+//    },true)
+//
+//    dom.addEventListener('click',function(){
+//        console.log('click1, bubble')
+//    })
+//
+//    dom.addEventListener('click',function(){
+//        console.log('click2, capture')
+//    },true)
+
+
+    parent.addEventListener('click',function(e){
+        console.log('parent click, bubble')
+        e.preventDefault()
+    },{
+        capture:false,
+        once:true,
+        passive:true
+    })
+
+    parent.addEventListener('click',function(e){
+        console.log('parent click, capture')
+    },true)
+
+    window.addEventListener('load',function(){
+        console.log('load')
+    },true)
+    window.addEventListener('unload',function(){
+        alert('unload')
+        return false
+    },true)
+
+    name.addEventListener('focus',function(){
+       console.log('focus')
+        return false
+    })
+    name.addEventListener('blur',function(){
+       console.log('blur')
+        return false
+    })
+
+    name.addEventListener('focusin',function(e){
+        console.log('focusin')
+    })
+    parent.addEventListener('focusin',function(e){
+        console.log(e.button)
+        console.log('parent focusin')
+    })
+    name.addEventListener('focusout',function(){
+       console.log('focusout')
+    })
+    parent.addEventListener('focusout',function(e){
+       console.log('parent focusout')
+    })
+
+
+    name.addEventListener('select',function(){
+        console.log('select')
+    })
+
+
+
+
+</script>
+</body>
+</html>
