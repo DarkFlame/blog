@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #box {
+        width:400px;
+        height: 500px;
+        margin: 100px;
+        background-color: lightblue;
+    }
+    #in{
+        position: sticky;
+        left:250px;
+        top:0px;
+        padding: 50%;
+        width: 0;
+        height: 0;
+        background-color: rgba(90, 243, 151, 0.8);
+    }
+</style>
+<div id="box">
+    <div id="in">asdasd</div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.js"></script>
+<script>
+    var x = $('#box').height()
+    console.log(x);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="parent">
+       <input id="name" name="name" type="text" style="width: 100px;">
+   </div>
+<script>
+    let parent = document.querySelector('#parent')
+    let name = document.querySelector('#name')
+
+    name.addEventListener('keydown',(e)=>{
+        console.log(e,'keydown')
+
+    })
+    name.addEventListener('keypress',(e)=>{
+        console.log(e,'keypress')
+
+    })
+    document.addEventListener('keyup',(e)=>{
+        console.log(e,'keyup ')
+    })
+
+//    name.addEventListener('beforeinput',(e)=>{
+//        console.log(e,'beforeinput')
+//      //  e.preventDefault()
+////        return false;
+//    })
+
+</script>
+</body>
+</html>
